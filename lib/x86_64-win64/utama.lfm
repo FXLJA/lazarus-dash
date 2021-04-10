@@ -1,0 +1,212 @@
+object Form1: TForm1
+  Left = 662
+  Height = 549
+  Top = 266
+  Width = 1000
+  Caption = 'Form1'
+  ClientHeight = 549
+  ClientWidth = 1000
+  DesignTimePPI = 120
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '2.0.10.0'
+  object Stage1: TImage
+    Left = 1000
+    Height = 550
+    Top = 0
+    Width = 1000
+    Center = True
+    Stretch = True
+  end
+  object Stage: TImage
+    Left = 0
+    Height = 550
+    Top = 0
+    Width = 1000
+    Center = True
+    Stretch = True
+  end
+  object btnPlay: TImage
+    Left = 454
+    Height = 100
+    Hint = 'Play'
+    Top = 208
+    Width = 100
+    Center = True
+    OnClick = btnPlayClick
+    ParentShowHint = False
+    ShowHint = True
+    Stretch = True
+  end
+  object btnSetting: TImage
+    Left = 928
+    Height = 56
+    Top = 16
+    Width = 56
+    Center = True
+    OnClick = btnSettingClick
+    Stretch = True
+    Visible = False
+  end
+  object MPlayerControl1: TMPlayerControl
+    Left = 20
+    Height = 40
+    Top = 20
+    Width = 36
+    Loop = 0
+    Visible = False
+    Volume = 0
+  end
+  object pnlSettings: TPanel
+    Left = 192
+    Height = 312
+    Top = 136
+    Width = 625
+    ClientHeight = 312
+    ClientWidth = 625
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    object tbVolume: TTrackBar
+      Left = 40
+      Height = 31
+      Top = 110
+      Width = 540
+      Frequency = 10
+      Max = 100
+      Position = 100
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Volume: TLabel
+      Left = 40
+      Height = 23
+      Top = 70
+      Width = 72
+      Caption = 'Volume'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -18
+      Font.Name = 'Showcard Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnExit: TImage
+      Left = 568
+      Height = 38
+      Top = 16
+      Width = 38
+      Center = True
+      OnClick = btnExitClick
+      Stretch = True
+    end
+    object btnRestart: TImage
+      Left = 275
+      Height = 75
+      Top = 184
+      Width = 75
+      Center = True
+      OnClick = btnRestartClick
+      Stretch = True
+    end
+    object announceLabel: TLabel
+      Left = 192
+      Height = 74
+      Top = 21
+      Width = 277
+      Caption = 'YOU DIED'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clRed
+      Font.Height = -60
+      Font.Name = 'Showcard Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+  end
+  object imgFloor: TImage
+    Left = 0
+    Height = 81
+    Top = 469
+    Width = 1000
+    Center = True
+    Stretch = True
+  end
+  object imgFloor1: TImage
+    Left = 1000
+    Height = 81
+    Top = 469
+    Width = 1000
+    Center = True
+    Stretch = True
+  end
+  object imgChara: TImage
+    Left = 96
+    Height = 120
+    Top = 384
+    Width = 120
+    Center = True
+    Stretch = True
+  end
+  object imgSpike: TImage
+    Left = 864
+    Height = 60
+    Top = 416
+    Width = 60
+  end
+  object imgSpike1: TImage
+    Left = 1496
+    Height = 60
+    Top = 416
+    Width = 60
+  end
+  object imgSpike2: TImage
+    Left = 1824
+    Height = 60
+    Top = 416
+    Width = 60
+  end
+  object scoreLabel: TLabel
+    Left = 496
+    Height = 41
+    Top = 48
+    Width = 17
+    Alignment = taCenter
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -30
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object timerArena: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = timerArenaTimer
+    Left = 88
+    Top = 24
+  end
+  object timerCharacter: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = timerCharacterTimer
+    Left = 88
+    Top = 104
+  end
+  object timerBackground: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = timerBackgroundTimer
+    Left = 88
+    Top = 184
+  end
+end
